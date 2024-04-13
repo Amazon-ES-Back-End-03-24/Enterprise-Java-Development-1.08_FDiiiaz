@@ -73,9 +73,11 @@ public class Main {
 
     private static void transmisionDeVideo() {
         TvSeries gotSeries = new TvSeries("Game of Thrones", 60, 73);
+        TvSeries gotSeries1 = new TvSeries("LOST", 60, 103);
         Movie inceptionMovie = new Movie("Inception", 148, 8.8);
 
         System.out.println(gotSeries.getInfo());
+        System.out.println(gotSeries1.getInfo());
         System.out.println(inceptionMovie.getInfo());
     }
 
