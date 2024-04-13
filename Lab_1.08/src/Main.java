@@ -1,3 +1,6 @@
+import InterfazIntList.IntArrayList;
+import InterfazIntList.IntList;
+import InterfazIntList.IntVector;
 import automoviles.Sedan;
 import automoviles.Truck;
 import automoviles.UtilityVehicle;
@@ -6,12 +9,10 @@ import transmisionVideo.TvSeries;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello and welcome!");
         System.out.println("------BIG DECIMAL------");
         //OPERACIONES BIG DECIMAL
         operacionesBigDecimal();
@@ -29,8 +30,8 @@ public class Main {
         System.out.println("-----------");
         System.out.println("------INTERFAZ INT LIST------");
         //INTERFAZ INTLIST
-        interfazIntList();
 
+        interfazIntList();
     }
 
     private static void operacionesBigDecimal() {
@@ -76,5 +77,17 @@ public class Main {
 
         System.out.println(gotSeries.getInfo());
         System.out.println(inceptionMovie.getInfo());
+    }
+
+    private static void interfazIntList() {
+        IntList list1 = new IntArrayList();
+        list1.add(5);
+        list1.add(10);
+        System.out.println("Elemento en ID 1 (IntArrayList): " + list1.get(1));
+
+        IntList list2 = new IntVector();
+        list2.add(15);
+        list2.add(20);
+        System.out.println("Elemento en ID 1 (IntVector): " + list2.get(1));
     }
 }

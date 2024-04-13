@@ -1,11 +1,11 @@
 package InterfazIntList;
 
-public class IntArrayList implements IntList {
+public class IntVector implements IntList {
     private int[] array;
     private int size;
 
-    public IntArrayList() {
-        array = new int[10];
+    public IntVector() {
+        array = new int[20];
         size = 0;
     }
 
@@ -13,8 +13,7 @@ public class IntArrayList implements IntList {
     @Override
     public void add(int number) {
         if (size == array.length) {
-
-            int newSize = array.length + array.length / 2;
+            int newSize = array.length * 2;
             int[] newArray = new int[newSize];
             System.arraycopy(array, 0, newArray, 0, size);
             array = newArray;
